@@ -1,0 +1,19 @@
+[project]
+name = "oci-home-infra"
+version = "0.1.0"
+description = "OCI infrastructure as a code for Home service"
+readme = "README.md"
+authors = [
+    { name = "Oleksandr Novachok", email = "novachok@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "pulumi>=3.270.0",
+]
+
+[project.scripts]
+oci-home-infra = "oci_home_infra:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"

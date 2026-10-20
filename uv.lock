@@ -63,10 +63,14 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "pulumi" },
+    { name = "pulumi-oci" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pulumi", specifier = ">=3.270.0" }]
+requires-dist = [
+    { name = "pulumi", specifier = ">=3.270.0" },
+    { name = "pulumi-oci", specifier = ">=5.3.1" },
+]
 
 [[package]]
 name = "opentelemetry-api"
@@ -236,6 +240,20 @@ dependencies = [
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f3/dc/5f8fa00f894774dd7fac3498cf2e969934b93906ca40bd9ac3392c339456/pulumi-3.270.0-py3-none-any.whl", hash = "sha256:091be515bf297f69534342b64889cce408a7a95414c3ed843627aa09185c4cc8", size = 433159, upload-time = "2026-10-16T20:29:07.687Z" },
+]
+
+[[package]]
+name = "pulumi-oci"
+version = "5.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+    { name = "pulumi" },
+    { name = "semver" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5c/ee/7f2992cf271964a78fa6b24cc9d5983818817636b2263a6aebb385e53bf8/pulumi_oci-5.3.1.tar.gz", hash = "sha256:2ceb3247368f5d272a826e82f4e15b098c94b898a17c1387b416ddf4f24530f2", size = 12056376, upload-time = "2026-10-13T18:25:28.664Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/b7/718ed9880211e5d7bc727b5a55b382e0866ae3a751580540a8c44f74f214/pulumi_oci-5.3.1-py3-none-any.whl", hash = "sha256:f9838e7cff6e672f0c97ab67ae7e7fba3030eb20698714bcc46665f98dc6636c", size = 17055744, upload-time = "2026-10-13T18:25:25.605Z" },
 ]
 
 [[package]]

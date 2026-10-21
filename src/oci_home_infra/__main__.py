@@ -4,11 +4,16 @@ import pulumi
 import pulumi_oci as oci
 from pulumi import Output
 
+tags = {
+    "project": "novachok.pp.ua"
+}
+
 homeCompartment = oci.identity.Compartment(
-    "homeCompartment", 
-    name="home-compartment", 
-    description="home-compartment",
-    enable_delete=True
+    "novachok.pp.ua-compartment", 
+    name="novachok.pp.ua-compartemnt", 
+    description="Compartment for novachok.pp.ua project",
+    enable_delete=True,
+    freeform_tags=tags
 )
 
 namespace = Output.all(homeCompartment.id).apply(

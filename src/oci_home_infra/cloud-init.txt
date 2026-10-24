@@ -1,0 +1,9 @@
+#cloud-config
+packages:
+  - git
+  - docker.io
+runcmd:
+  - apt-get update -y
+  - apt-get upgrade -y
+  - systemctl enable docker
+  - systemctl start docker
